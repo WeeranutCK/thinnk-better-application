@@ -1,0 +1,25 @@
+.button {
+    -fx-background-radius: 10;
+}
+
+.text-area {
+    -fx-background-radius: 5;
+    -fx-background-insets: 0;
+}
+
+.text-area .content {
+    -fx-background-radius: 0;
+}
+
+.scroll-pane {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane:focused {
+    -fx-background-insets: 0;
+}
+
+.scroll-pane .corner {
+    -fx-background-insets: 0;
+}

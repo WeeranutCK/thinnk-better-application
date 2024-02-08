@@ -1,0 +1,9 @@
+.box {
+    -fx-background-radius: 10;
+    -fx-border-width: 10;
+}
+
+.wallet-box {
+    -fx-background-radius: 3;
+    -fx-border-width: 10;
+}

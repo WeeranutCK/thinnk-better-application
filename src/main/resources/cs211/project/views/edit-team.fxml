@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<HBox fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1024.0" style="-fx-background-color: #131113;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.EditTeamController">
+    <children>
+        <VBox fx:id="navBarVBox" alignment="TOP_CENTER" prefWidth="214.0" />
+        <ScrollPane fitToWidth="true" prefHeight="1454.0" prefWidth="810.0" style="-fx-padding: 0;">
+            <content>
+                <VBox styleClass="background" stylesheets="@../../../../../data/styles/styles.css">
+                    <children>
+                        <HBox>
+                            <children>
+                                <HBox>
+                                    <HBox.margin>
+                                        <Insets left="45.0" top="45.0" />
+                                    </HBox.margin>
+                                    <children>
+                                        <Label text="Edit Team" textFill="#f0f0f0">
+                                            <font>
+                                                <Font name="Arial Bold" size="26.0" />
+                                            </font>
+                                 <styleClass>
+                                    <String fx:value="bold" />
+                                    <String fx:value="h2" />
+                                 </styleClass>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="76.0" prefWidth="578.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onBack" prefHeight="26.0" prefWidth="80.0" stylesheets="@../styles/edit-team/edit-team.css" text="Back" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="bold" />
+                                    <String fx:value="h8" />
+                                    <String fx:value="secondary-button" />
+                                 </styleClass>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#onSubmit" prefHeight="26.0" prefWidth="80.0" stylesheets="@../styles/edit-team/edit-team.css" text="Submit" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <styleClass>
+                                    <String fx:value="primary-button" />
+                                    <String fx:value="h8" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="45.0" />
+                           </HBox.margin>
+                        </HBox>
+                            </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                        </HBox>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <HBox alignment="BOTTOM_LEFT" prefWidth="627.0">
+                           <HBox.margin>
+                              <Insets left="45.0" />
+                           </HBox.margin>
+                           <children>
+                              <Label fx:id="teamNameLabel" alignment="TOP_LEFT" prefHeight="26.0" text="Team Name " textFill="#f0f0f0">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="bold" />
+                                    <String fx:value="h3" />
+                                 </styleClass>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="eventNameLabel" alignment="CENTER" prefHeight="25.0" styleClass="h10" text="(Event : eventName)" textFill="#f0f0f0">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER_LEFT" styleClass="box">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="35.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="206.0" text="General Information" textFill="#f0f0f0">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="h5" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                              <HBox alignment="BOTTOM_RIGHT" prefHeight="23.0" prefWidth="434.0">
+                                 <children>
+                                    <Label text="Event Period :" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                       <styleClass>
+                                          <String fx:value="bold" />
+                                          <String fx:value="h10" />
+                                       </styleClass>
+                                    </Label>
+                                    <Label fx:id="eventStartTimeLabel" styleClass="h10" text="eventStartTimeLabel" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="eventStartTimeLabel1" styleClass="h10" text="-" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="eventEndTimeLabel" styleClass="h10" text="eventEndTimeLabel" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" styleClass="box-in-event">
+                           <children>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label prefWidth="117.0" text="Team Name" textFill="#f0f0f0">
+                                       <font>
+                                          <Font name="Arial Bold" size="19.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="40.0" />
+                                       </HBox.margin>
+                                       <styleClass>
+                                          <String fx:value="h6" />
+                                          <String fx:value="bold" />
+                                       </styleClass>
+                                    </Label>
+                                    <TextField fx:id="teamNameTextField" prefHeight="33.0" prefWidth="460.0" stylesheets="@../styles/edit-team/edit-team.css">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets bottom="7.0" left="7.0" top="7.0" />
+                                       </padding>
+                                       <styleClass>
+                                          <String fx:value="primary-text-field" />
+                                          <String fx:value="h10" />
+                                       </styleClass>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefWidth="531.0">
+                                 <children>
+                                    <Label fx:id="errorTeamNameLabel" styleClass="h10" text="errorTeamNameLabel" textFill="RED">
+                                       <font>
+                                          <Font name="Arial" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="7.0" left="159.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label text="Date " textFill="#f0f0f0">
+                                       <font>
+                                          <Font name="Arial Bold" size="19.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="40.0" />
+                                       </HBox.margin>
+                                       <styleClass>
+                                          <String fx:value="h6" />
+                                          <String fx:value="bold" />
+                                       </styleClass>
+                                    </Label>
+                                    <DatePicker fx:id="startDateDatePicker" prefHeight="33.0" prefWidth="150.0" styleClass="h10" stylesheets="@../styles/edit-team/edit-team.css">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="3.0" />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                    <Line endX="100.0" startX="117.92513275146484" startY="1.0490417707842425E-6" stroke="WHITE" strokeWidth="3.5" styleClass="line">
+                                       <HBox.margin>
+                                          <Insets left="30.0" right="30.0" />
+                                       </HBox.margin>
+                                    </Line>
+                                    <DatePicker fx:id="endDateDatePicker" prefHeight="33.0" prefWidth="150.0" styleClass="h10" stylesheets="@../styles/edit-team/edit-team.css">
+                                       <opaqueInsets>
+                                          <Insets bottom="2.5" top="2.5" />
+                                       </opaqueInsets>
+                                    </DatePicker>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="90.4">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="234.0">
+                                       <children>
+                                          <Label fx:id="errorStartDateLabel" styleClass="h10" text="errorStartDateLabel" textFill="RED">
+                                             <font>
+                                                <Font name="Arial" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="289.0">
+                                       <children>
+                                          <Label fx:id="errorEndDateLabel" styleClass="h10" text="errorEndDateLabel" textFill="RED">
+                                             <font>
+                                                <Font name="Arial" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="7.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label text="Time " textFill="#f0f0f0">
+                                       <font>
+                                          <Font name="Arial Bold" size="19.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="40.0" />
+                                       </HBox.margin>
+                                       <styleClass>
+                                          <String fx:value="h6" />
+                                          <String fx:value="bold" />
+                                       </styleClass>
+                                    </Label>
+                                    <TextField fx:id="startTimeTextField" prefHeight="33.0" prefWidth="150.0" stylesheets="@../styles/edit-team/edit-team.css">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets bottom="7.0" left="7.0" top="7.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <styleClass>
+                                          <String fx:value="primary-text-field" />
+                                          <String fx:value="h10" />
+                                       </styleClass>
+                                    </TextField>
+                                    <Line endX="100.0" startX="117.92513275146484" startY="1.0490417707842425E-6" stroke="WHITE" strokeWidth="3.5" styleClass="line">
+                                       <HBox.margin>
+                                          <Insets left="30.0" right="30.0" />
+                                       </HBox.margin>
+                                    </Line>
+                                    <TextField fx:id="endTimeTextField" prefHeight="33.0" prefWidth="150.0" stylesheets="@../styles/edit-team/edit-team.css">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets bottom="7.0" left="7.0" top="7.0" />
+                                       </padding>
+                                       <styleClass>
+                                          <String fx:value="primary-text-field" />
+                                          <String fx:value="h10" />
+                                       </styleClass>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="22.0" prefWidth="90.4">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="234.0">
+                                       <children>
+                                          <Label fx:id="errorStartTimeLabel" styleClass="h10" text="errorStartTimeLabel" textFill="RED">
+                                             <font>
+                                                <Font name="Arial" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="283.0">
+                                       <children>
+                                          <Label fx:id="errorEndTimeLabel" styleClass="h10" text="errorEndTimeLabel" textFill="RED">
+                                             <font>
+                                                <Font name="Arial" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="155.0">
+                                 <children>
+                                    <Label text="More Detail" textFill="#f0f0f0">
+                                       <font>
+                                          <Font name="Arial Bold" size="19.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="40.0" />
+                                       </HBox.margin>
+                                       <styleClass>
+                                          <String fx:value="h6" />
+                                          <String fx:value="bold" />
+                                       </styleClass>
+                                    </Label>
+                                    <CheckBox fx:id="autoAcceptingCheckBox" mnemonicParsing="false" styleClass="h10" text="Auto Accepting" textFill="#f0f0f0">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="multiTeamAllowedCheckBox" mnemonicParsing="false" styleClass="h10" text="Multi Team Allowed" textFill="#f0f0f0">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="50.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="16.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="214.0">
+                                       <children>
+                                          <Label prefWidth="166.8" text="Max Participants " textFill="#f0f0f0">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                             <styleClass>
+                                                <String fx:value="h6" />
+                                                <String fx:value="bold" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label fx:id="maxParticipantsLabel" styleClass="h11" text="(Max Participant is ....)" textFill="#b1b1b1">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <TextField fx:id="maxParticipantsTextField" prefHeight="33.0" prefWidth="150.0" stylesheets="@../styles/edit-team/edit-team.css">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                       <padding>
+                                          <Insets bottom="7.0" left="7.0" top="7.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                       <styleClass>
+                                          <String fx:value="primary-text-field" />
+                                          <String fx:value="h10" />
+                                       </styleClass>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="20.0" prefWidth="597.0">
+                                 <children>
+                                    <Label fx:id="errorMaxParticipantsLabel" styleClass="h10" text="errorMaxParticipantsLabel" textFill="RED">
+                                       <font>
+                                          <Font name="Arial" size="13.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="7.0" left="215.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="45.0" right="45.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="45.0" right="45.0" top="30.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="444.8" prefWidth="703.2" styleClass="box">
+                     <children>
+                        <HBox alignment="BOTTOM_LEFT">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="35.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label text="Staff" textFill="#f0f0f0">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="h5" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" prefWidth="703.0" styleClass="box-in-event">
+                           <padding>
+                              <Insets bottom="35.0" left="45.0" right="45.0" top="20.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <VBox fx:id="staffBlockVBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="326.0" prefWidth="627.2" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="45.0" right="45.0" top="30.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox fx:id="registrantsBlockVBox" alignment="CENTER_LEFT" minHeight="400.0">
+                     <VBox.margin>
+                        <Insets bottom="45.0" left="45.0" right="45.0" />
+                     </VBox.margin>
+                  </VBox>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</HBox>

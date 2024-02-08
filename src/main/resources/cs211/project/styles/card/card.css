@@ -1,0 +1,7 @@
+* {
+    -fx-background-radius: 10;
+}
+
+.button {
+    -fx-background-radius: 7;
+}

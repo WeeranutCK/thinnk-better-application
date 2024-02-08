@@ -1,0 +1,67 @@
+* {
+    -fx-border-width: 0;
+}
+
+.button {
+    -fx-background-radius: 10;
+}
+
+.combo-box .indexed-cell {
+    -fx-alignment: CENTER;
+}
+
+.combo-box .list-cell {
+    -fx-alignment: CENTER;
+}
+
+.text-field {
+    -fx-background-radius: 7;
+}
+
+.date-picker {
+    -fx-background-insets: null;
+    -fx-border-insets: null;
+}
+
+.date-picker .inner {
+    -fx-border-insets: null;
+}
+
+.date-picker .arrow-button {
+    -fx-border-insets: null;
+}
+
+.date-picker .date-picker-popup .spinner .button:hover {
+    -fx-border-width: 1;
+}
+
+.date-picker .date-picker-popup .calendar-grid {
+    -fx-padding: 0;
+}
+
+.table-view .table-column .arrow {
+    -fx-border-image-insets: 0;
+}
+
+.table-view {
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+.table-view .column-header-background {
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header .label {
+    -fx-alignment: CENTER;
+}
+
+.table-view .cell {
+    -fx-alignment: CENTER;
+}
+
+.table-view .scroll-bar:vertical .thumb  {
+    -fx-alignment: CENTER;
+}

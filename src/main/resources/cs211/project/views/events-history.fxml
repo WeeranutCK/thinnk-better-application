@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.EventsHistoryController">
+    <children>
+        <VBox fx:id="navBarVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="214.0" />
+        <VBox prefHeight="768.0" prefWidth="819.0" styleClass="box-in-event" stylesheets="@../../../../../data/styles/styles.css">
+            <children>
+                <HBox prefHeight="100.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="600.0">
+                            <children>
+                                <Label text="Events History" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial Bold" size="26.0" />
+                                    </font>
+                           <styleClass>
+                              <String fx:value="h2" />
+                              <String fx:value="bold" />
+                           </styleClass>
+                                </Label>
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="462.0">
+                            <children>
+                        <ComboBox fx:id="roleComboBox" onAction="#updateSort" prefWidth="147.0" stylesheets="@../styles/events-history/combo-box.css">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                                <ComboBox fx:id="eventStatusComboBox" onAction="#updateSort" prefWidth="150.0" stylesheets="@../styles/events-history/combo-box.css" />
+                            </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets top="45.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="27.0" prefWidth="750.0">
+                    <children>
+                        <HBox prefHeight="27.0" prefWidth="338.0">
+                            <children>
+                                <TextField fx:id="searchBarTextField" prefHeight="27.0" prefWidth="310.0" promptText="Search..." stylesheets="@../styles/events/text-field.css">
+                           <styleClass>
+                              <String fx:value="primary-text-field" />
+                              <String fx:value="h10" />
+                           </styleClass></TextField>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="350.0">
+                            <children>
+                                <Label text="Sort By" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial Bold" size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets right="20.0" />
+                                    </HBox.margin>
+                           <styleClass>
+                              <String fx:value="h9" />
+                              <String fx:value="bold" />
+                           </styleClass>
+                                </Label>
+                                <ComboBox fx:id="sortMenuComboBox" onAction="#updateSort" prefHeight="27.0" prefWidth="147.0" stylesheets="@../styles/events-history/combo-box.css" />
+                                <ComboBox fx:id="sortMethodComboBox" onAction="#updateSort" prefHeight="27.0" prefWidth="115.0" stylesheets="@../styles/events-history/combo-box.css">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </ComboBox>
+                            </children>
+                        </HBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </HBox>
+                <ScrollPane fx:id="eventCardScrollPane" hbarPolicy="NEVER" prefHeight="564.0" prefWidth="722.0" stylesheets="@../styles/hosted-event/scroll-pane.css">
+                    <content>
+                        <VBox fx:id="eventCardVBox" alignment="TOP_CENTER" prefHeight="564.0" prefWidth="722.0" styleClass="box-in-event" />
+                    </content>
+                    <VBox.margin>
+                        <Insets top="25.0" />
+                    </VBox.margin>
+                </ScrollPane>
+            </children>
+            <padding>
+                <Insets left="45.0" right="45.0" />
+            </padding>
+        </VBox>
+    </children>
+</HBox>

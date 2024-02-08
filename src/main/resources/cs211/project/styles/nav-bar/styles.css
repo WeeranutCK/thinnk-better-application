@@ -1,0 +1,8 @@
+*.navbar-vbox {
+    -fx-background-color: linear-gradient(to bottom, #6528F7, #A076F9);
+}
+
+*.secondary-button {
+    -fx-background-color: #F0F0F0;
+    -fx-text-fill: #6528F7;
+}

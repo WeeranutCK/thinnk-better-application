@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox stylesheets="@../../../../../data/styles/styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.ProfileController">
+   <children>
+
+      <VBox fx:id="navBarVBox" prefHeight="768.0" prefWidth="214.0" />
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefWidth="810.0" style="-fx-background-color: #3B3B3B;">
+
+         <content>
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1200.0" prefWidth="795.0" styleClass="background" stylesheets="@../../../../../data/styles/styles.css">
+               <children>
+                  <VBox alignment="CENTER" fillWidth="false" prefHeight="200.0" prefWidth="706.0">
+                     <children>
+                        <StackPane fx:id="stackPane" alignment="BOTTOM_RIGHT">
+                           <children>
+                              <StackPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="155.0" prefWidth="155.0">
+                                 <children>
+                                    <ImageView fx:id="profileImageView" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <StackPane.margin>
+                                          <Insets />
+                                       </StackPane.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="DEFAULT" />
+                                       </cursor>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                              <StackPane maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#onUpdateProfileImage" prefHeight="50.0" prefWidth="50.0">
+                                 <children>
+                                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #f0f0f0; -fx-background-radius: 55;" />
+                                    <ImageView fx:id="pencilImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <StackPane.margin>
+                                          <Insets />
+                                       </StackPane.margin>
+                                       <image>
+                                          <Image url="@../images/edit-pen-icon.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ImageView>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                              </StackPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <Label fx:id="profileNameLabel" alignment="CENTER" text="profileNameLabel" textFill="#fffefe">
+                     <font>
+                        <Font name="Arial Bold" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="27.0" top="14.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="h3" />
+                        <String fx:value="bold" />
+                     </styleClass>
+                  </Label>
+                  <VBox spacing="15.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="65.0" styleClass="box" stylesheets="@../styles/profile/vbox-hbox.css">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" maxWidth="520.0" prefHeight="66.0" prefWidth="508.0">
+                                 <children>
+                                    <Label prefWidth="150.0" text="Profile Name" textFill="#fffefe">
+                                       <font>
+                                          <Font name="Arial Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <styleClass>
+                                          <String fx:value="h7" />
+                                          <String fx:value="bold" />
+                                       </styleClass>
+                                    </Label>
+                                    <Label fx:id="profileNameLabel2" styleClass="h8" text="profileNameLabel2" textFill="#fffefe">
+                                       <font>
+                                          <Font name="Arial" size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="162.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#onChangeProfileName" style="-fx-background-color: transparent;" text="Change Profile Name" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <styleClass>
+                                          <String fx:value="tertiary-button" />
+                                          <String fx:value="h10" />
+                                          <String fx:value="bold" />
+                                       </styleClass>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="65.0" styleClass="box" stylesheets="@../styles/profile/vbox-hbox.css">
+                           <children>
+                              <Label prefWidth="150.0" text="Username" textFill="#fffefe">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="h7" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                              <Label fx:id="userNameLabel" styleClass="h8" text="userNameLabel" textFill="#fffefe">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox fx:id="dateOfBirth" alignment="CENTER_LEFT" prefHeight="65.0" styleClass="box" stylesheets="@../styles/profile/vbox-hbox.css">
+                           <children>
+                              <Label prefWidth="150.0" text="Date of Birth" textFill="#fffefe">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="h7" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                              <Label fx:id="dateOfBirthLabel" styleClass="h8" text="dateOfBirthLabel" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox fx:id="userID" alignment="CENTER_LEFT" prefHeight="65.0" styleClass="box" stylesheets="@../styles/profile/vbox-hbox.css">
+                           <children>
+                              <Label prefWidth="150.0" text="User ID  " textFill="#fffefe">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="h7" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                              <Label fx:id="idLabel" styleClass="h8" text="idLabel" textFill="#fffefe">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox fx:id="password" alignment="CENTER_LEFT" prefHeight="65.0" styleClass="box" stylesheets="@../styles/profile/vbox-hbox.css">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="520.0">
+                                 <children>
+                                    <Label prefWidth="150.0" text="Password" textFill="#fffefe">
+                                       <font>
+                                          <Font name="Arial Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <styleClass>
+                                          <String fx:value="h7" />
+                                          <String fx:value="bold" />
+                                       </styleClass>
+                                    </Label>
+                                    <Label fx:id="passwordLabel" styleClass="h8" text="●●●●●●●●●" textFill="#fffefe">
+                                       <font>
+                                          <Font name="Arial Bold" size="16.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="160.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#onChangePassword" style="-fx-background-color: transparent;" text="Change Password" textFill="#fffefe">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <styleClass>
+                                          <String fx:value="tertiary-button" />
+                                          <String fx:value="h10" />
+                                          <String fx:value="bold" />
+                                       </styleClass>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="65.0" styleClass="box" stylesheets="@../styles/profile/vbox-hbox.css">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="520.0">
+                                       <children>
+                                          <Label prefWidth="150.0" text="Email" textFill="#fffefe">
+                                             <font>
+                                                <Font name="Arial Bold" size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="h7" />
+                                                <String fx:value="bold" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label fx:id="emailLabel" styleClass="h8" text="emailLabel" textFill="#fffefe">
+                                             <font>
+                                                <Font name="Arial" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="162.0">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#onChangeEmail" style="-fx-background-color: transparent;" text="Change Email" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <styleClass>
+                                          <String fx:value="tertiary-button" />
+                                          <String fx:value="h10" />
+                                          <String fx:value="bold" />
+                                       </styleClass>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="bios" alignment="CENTER_LEFT" prefHeight="212.0" styleClass="box" stylesheets="@../styles/profile/vbox-hbox.css">
+                           <children>
+                              <Label text="Bios" textFill="#fffefe">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="15.0" />
+                                 </VBox.margin>
+                                 <styleClass>
+                                    <String fx:value="h7" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                              <TextArea fx:id="biosTextArea" prefHeight="200.0" stylesheets="@../styles/profile/text-area.css" text="biosTextArea" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="15.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="secondary-text-area" />
+                                    <String fx:value="h8" />
+                                 </styleClass>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="199.0" prefWidth="706.0" spacing="10.0">
+                           <children>
+                              <VBox fx:id="walletVbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="198.0" prefWidth="320.0" spacing="12.0" styleClass="box" stylesheets="@../styles/profile/vbox-hbox.css">
+                                 <children>
+                                    <Label alignment="TOP_LEFT" prefWidth="320.0" text="THINNK Wallet" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                       <styleClass>
+                                          <String fx:value="h8" />
+                                          <String fx:value="bold" />
+                                       </styleClass>
+                                    </Label>
+                                    <VBox alignment="CENTER" styleClass="wallet-box">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <children>
+                                          <Label fx:id="walletLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="86.0" stylesheets="@../styles/profile/text-area.css" text="walletLabel" textFill="#fffefe">
+                                             <font>
+                                                <Font name="Arial Bold" size="17.0" />
+                                             </font>
+                                             <styleClass>
+                                                <String fx:value="h8" />
+                                                <String fx:value="bold" />
+                                             </styleClass>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="TopUp" mnemonicParsing="false" onAction="#addMoney" prefHeight="30.0" prefWidth="86.0" stylesheets="@../styles/profile/button.css" text="Top Up" textFill="WHITE">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <font>
+                                                <Font name="Arial Bold" size="14.0" />
+                                             </font>
+                                             <styleClass>
+                                                <String fx:value="primary-button" />
+                                                <String fx:value="h10" />
+                                                <String fx:value="bold" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="Withdraw" mnemonicParsing="false" onAction="#onWithdrawMoney" prefHeight="30.0" prefWidth="96.0" stylesheets="@../styles/profile/button.css" text="Withdraw" textFill="#fffefe">
+                                             <HBox.margin>
+                                                <Insets left="15.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <font>
+                                                <Font name="Arial Bold" size="14.0" />
+                                             </font>
+                                             <styleClass>
+                                                <String fx:value="primary-button" />
+                                                <String fx:value="h10" />
+                                                <String fx:value="bold" />
+                                             </styleClass>
+                                          </Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="15.0" right="15.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="199.0" prefWidth="376.0">
+                                 <children>
+                                    <HBox fx:id="showHostedEvent" alignment="CENTER_LEFT" prefHeight="60.0" styleClass="box" stylesheets="@../styles/profile/vbox-hbox.css">
+                                       <children>
+                                          <Label prefWidth="250.0" text="Hosted Event" textFill="#fffefe">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                             </font>
+                                             <styleClass>
+                                                <String fx:value="h9" />
+                                                <String fx:value="bold" />
+                                             </styleClass>
+                                          </Label>
+                                          <VBox alignment="CENTER_RIGHT">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <children>
+            
+                                                            <Button fx:id="HostedEvent" mnemonicParsing="false" onAction="#onShowHostedEvent" prefHeight="38.0" prefWidth="90.0" stylesheets="@../styles/profile/button.css" text="Show" textFill="#fffefe">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font name="Arial Bold" size="14.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="primary-button" />
+                                                      <String fx:value="h8" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets left="20.0" right="15.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="showEventParticipated" alignment="CENTER_LEFT" prefHeight="60.0" styleClass="box" stylesheets="@../styles/profile/vbox-hbox.css">
+                                       <children>
+                                          <Label prefWidth="250.0" text="Event Participated" textFill="#fffefe">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                             </font>
+                                             <styleClass>
+                                                <String fx:value="h9" />
+                                                <String fx:value="bold" />
+                                             </styleClass>
+                                          </Label>
+                                          <VBox alignment="CENTER_RIGHT">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <children>
+            
+                                                      <Button fx:id="EventParticipated" mnemonicParsing="false" onAction="#onShowEventParticipated" prefHeight="38.0" prefWidth="90.0" stylesheets="@../styles/profile/button.css" text="Show" textFill="#fffefe">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font name="Arial Bold" size="14.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="primary-button" />
+                                                      <String fx:value="h8" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="20.0" right="15.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="showStaffEventParticipated" alignment="CENTER_LEFT" prefHeight="60.0" styleClass="box" stylesheets="@../styles/profile/vbox-hbox.css">
+                                       <children>
+                                          <Label prefWidth="250.0" text="Staff Event Participated" textFill="#fffefe">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Arial Bold" size="15.0" />
+                                             </font>
+                                             <styleClass>
+                                                <String fx:value="h9" />
+                                                <String fx:value="bold" />
+                                             </styleClass>
+                                          </Label>
+                                          <VBox alignment="CENTER_RIGHT">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <children>
+            
+                                                      <Button fx:id="StaffEventParticipated" mnemonicParsing="false" onAction="#onShowStaffEventParticipated" prefHeight="38.0" prefWidth="90.0" stylesheets="@../styles/profile/button.css" text="Show" textFill="#fffefe">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font name="Arial Bold" size="14.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="primary-button" />
+                                                      <String fx:value="h8" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" right="15.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </VBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="45.0" right="45.0" />
+               </padding>
+            </VBox>
+         </content>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </ScrollPane>
+   </children>
+</HBox>

@@ -1,0 +1,40 @@
+* {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.white-button {
+    -fx-background-radius: 7;
+}
+
+.violet-button {
+    -fx-background-radius: 7;
+}
+
+.text-field {
+    -fx-background-radius: 7;
+}
+
+*.primary-button {
+    -fx-background-color: #6528F7;
+    -fx-text-fill: #F0F0F0;
+}
+
+*.secondary-button {
+    -fx-background-color: #F0F0F0;
+    -fx-text-fill: #6528F7;
+}
+
+*.background {
+    -fx-background-color: #131113;
+}
+
+*.primary-text-field {
+    -fx-background-color: #3B3B3B;
+    -fx-text-fill: #F0F0F0;
+    -fx-prompt-text-fill: #949494;
+    -fx-control-inner-background: #3B3B3B;
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+}
+

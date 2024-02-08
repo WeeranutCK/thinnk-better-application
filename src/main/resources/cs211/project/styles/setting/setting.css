@@ -1,0 +1,11 @@
+.combo-box .indexed-cell {
+    -fx-alignment: CENTER;
+}
+
+.combo-box .list-cell {
+    -fx-alignment: CENTER;
+}
+
+.button {
+    -fx-background-radius: 7;
+}

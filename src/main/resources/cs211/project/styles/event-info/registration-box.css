@@ -1,0 +1,7 @@
+.v-box {
+    -fx-background-radius: 15;
+}
+
+.label {
+    -fx-text-fill: #F0F0F0;
+}

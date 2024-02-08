@@ -1,0 +1,11 @@
+.main-data-box {
+    -fx-background-radius: 15;
+}
+
+.sub-data-box {
+    -fx-background-radius: 15;
+}
+
+.button {
+    -fx-background-radius: 7;
+}

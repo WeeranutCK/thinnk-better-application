@@ -1,0 +1,12 @@
+* {
+    -fx-background-color: #3B3B3B;
+    -fx-control-inner-background: #3B3B3B;
+    -fx-text-fill: #F0F0F0;
+    -fx-border-width: 0;
+    -fx-border-radius: 15;
+    -fx-background-insets: null;
+    -fx-border-insets: null;
+    -fx-faint-focus-color: transparent;
+    -fx-focus-color: hidden;
+    -fx-border-block: hidden;
+}

@@ -1,0 +1,26 @@
+.used-button {
+    -fx-background-radius: 5;
+}
+
+.primary-button {
+    -fx-background-radius: 5;
+}
+
+.box {
+    -fx-background-radius: 10;
+    -fx-border-width: 10;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+
+.combo-box .indexed-cell {
+    -fx-alignment: CENTER;
+}
+
+.combo-box .list-cell {
+    -fx-alignment: CENTER;
+}

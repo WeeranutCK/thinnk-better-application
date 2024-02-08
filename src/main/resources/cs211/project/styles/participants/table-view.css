@@ -1,0 +1,36 @@
+.table-view {
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+.table-column .arrow {
+    -fx-border-image-insets: 0;
+}
+
+.column-header {
+    -fx-border-width: 0;
+    -fx-alignment: CENTER;
+}
+
+.column-header .label {
+    -fx-alignment: CENTER;
+}
+
+.table-view .scroll-bar:vertical .thumb {
+    -fx-alignment: CENTER;
+}
+
+.table-view .scroll-bar:horizontal .thumb {
+    -fx-alignment: CENTER;
+}
+
+.table-view .scroll-bar .increment-button,
+.table-view .scroll-bar .decrement-button {
+    -fx-background-color: #575757;
+    -fx-border-color: #575757;
+}
+
+.table-cell {
+    -fx-alignment: CENTER;
+    -fx-border-width: 0;
+}

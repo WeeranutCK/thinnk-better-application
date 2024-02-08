@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" alignment="BOTTOM_LEFT" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.LogInController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="776.0" prefWidth="1024.0">
+         <children>
+            <StackPane alignment="TOP_CENTER" prefHeight="500.0" prefWidth="1024.0">
+               <children>
+                  <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#262626e8" height="500.0" strokeDashOffset="5.0" strokeType="OUTSIDE" strokeWidth="0.0" width="407.0" />
+                  <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="200.0" prefWidth="1024.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="88.0" prefWidth="406.0" text="Thinnk" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="60.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="168.0" prefWidth="274.0">
+                           <children>
+                              <TextField fx:id="usernameTextField" prefHeight="43.0" prefWidth="271.0" promptText="Username" stylesheets="@../styles/log-in/text-field.css">
+                                 <VBox.margin>
+                                    <Insets top="40.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </TextField>
+                              <PasswordField fx:id="passwordField" prefHeight="43.0" prefWidth="231.0" promptText="Password" stylesheets="@../styles/log-in/text-field.css">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="40.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </PasswordField>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="115.0" prefWidth="364.0">
+                           <children>
+                              <Label fx:id="errorMessageLabel" alignment="CENTER" prefHeight="34.0" text="errorMessageLabel" textFill="#ff4646">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="20.0" />
+                                 </padding>
+                              </Label>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Button fx:id="logInButton" mnemonicParsing="false" onAction="#onLogInButtonClick" prefWidth="100.0" stylesheets="@../styles/log-in/button.css" text="LOG IN" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets right="25.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#onSignUpButtonClick" prefWidth="100.0" stylesheets="@../styles/log-in/button.css" text="SIGN UP" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Label fx:id="forgotPasswordLabel" text="Forgot Password" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets top="25.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <StackPane.margin>
+                        <Insets top="40.0" />
+                     </StackPane.margin>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="1024.0">
+         <children>
+            <Hyperlink fx:id="hyperlinkText" text="Image by Paul Stachowiak Pixabay" textFill="#ffffffe8">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Hyperlink>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="15.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>

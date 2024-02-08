@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1024.0" stylesheets="@../../../../../data/styles/styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.AboutUsController">
+    <children>
+        <VBox fx:id="navBarVBox" alignment="TOP_CENTER" prefWidth="214.0" />
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefWidth="810.0" style="-fx-padding: 0;">
+         <content>
+            <VBox prefHeight="1180.0" prefWidth="810.0" styleClass="background">
+               <children>
+                  <Label text="About Us" textFill="#f0f0f0">
+                     <font>
+                        <Font name="Arial Bold" size="26.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="h2" />
+                        <String fx:value="bold" />
+                     </styleClass>
+                  </Label>
+                  <VBox prefWidth="703.0">
+                     <children>
+                        <VBox prefWidth="703.0" stylesheets="@../styles/about-us/about-us.css">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label text="Developers" textFill="#f0f0f0">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <styleClass>
+                                    <String fx:value="h4" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                              <HBox fillHeight="false">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="10.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <ImageView fx:id="weeranutImageView" fitHeight="169.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/about-us/weeranut.jpg" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="40.0" />
+                                       </HBox.margin>
+                                       <viewport>
+                                          <Rectangle2D height="609.89" minY="10.0" width="692.0" />
+                                       </viewport>
+                                    </ImageView>
+                                    <VBox prefHeight="154.0" prefWidth="312.0">
+                                       <children>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Weeranut Chayakul" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="20.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="h5" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h7" text=" (Nate)" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="23.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Student ID" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="6510405806" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="23.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Age" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="20" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="35.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label text="Phone No." textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="061-9935512" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="23.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Email" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="weeranut.c@ku.th" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="sub-data-box" />
+                                    <String fx:value="box-in-event" />
+                                 </styleClass>
+                              </HBox>
+                              <HBox fillHeight="false">
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <ImageView fx:id="jitladaImageView" fitHeight="156.0" fitWidth="177.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../images/about-us/jitlada.jpg" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="40.0" />
+                                       </HBox.margin>
+                                       <viewport>
+                                          <Rectangle2D height="440.68" minY="80.0" width="500.0" />
+                                       </viewport>
+                                    </ImageView>
+                                    <VBox prefHeight="154.0" prefWidth="312.0">
+                                       <children>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Jitlada Yotinta" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="20.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="h5" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h7" text=" (Kawfang)" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="23.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Student ID" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="6510405377" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="23.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Age" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="19" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="35.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label text="Phone No." textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="097-1952336" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="23.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Email" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="jitlada.yo@ku.th" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <styleClass>
+                                    <String fx:value="sub-data-box" />
+                                    <String fx:value="box-in-event" />
+                                 </styleClass>
+                              </HBox>
+                              <HBox fillHeight="false">
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <ImageView fx:id="karnnitraImageView" fitHeight="156.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/about-us/karnnitra.jpg" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="40.0" />
+                                       </HBox.margin>
+                                       <viewport>
+                                          <Rectangle2D height="1889.0" minX="80.0" width="2143.28846" />
+                                       </viewport>
+                                    </ImageView>
+                                    <VBox prefHeight="154.0" prefWidth="312.0">
+                                       <children>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Karnnitra Sukpanich" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="20.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="h5" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h7" text=" (Nita)" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="23.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Student ID" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="6510450194" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="23.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Age" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="19" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="35.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label text="Phone No." textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="094-1941554" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="23.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Email" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="karnnitra.s@ku.th" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <styleClass>
+                                    <String fx:value="sub-data-box" />
+                                    <String fx:value="box-in-event" />
+                                 </styleClass>
+                              </HBox>
+                              <HBox fillHeight="false">
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <ImageView fx:id="wanwalaiImageView" fitHeight="156.0" fitWidth="177.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../images/about-us/wanwalai.jpg" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="40.0" />
+                                       </HBox.margin>
+                                       <viewport>
+                                          <Rectangle2D height="3045.966" minY="550.0" width="3456.0" />
+                                       </viewport>
+                                    </ImageView>
+                                    <VBox prefHeight="154.0" prefWidth="312.0">
+                                       <children>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Wanwalai Ngamsattha" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="20.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="h5" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h7" text=" (Ting)" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="23.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Student ID" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="6510450925" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="23.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Age" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="19" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="35.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label text="Phone No." textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="095-7598725" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="23.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox alignment="BOTTOM_LEFT">
+                                             <children>
+                                                <Label text="Email" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="20.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h7" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label styleClass="h8" text="wanwalai.n@ku.th" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="sub-data-box" />
+                                    <String fx:value="box-in-event" />
+                                 </styleClass>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="20.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="main-data-box" />
+                              <String fx:value="box" />
+                           </styleClass>
+                        </VBox>
+                        <HBox alignment="CENTER_LEFT" stylesheets="@../styles/about-us/about-us.css">
+                           <children>
+                              <Label text="Manual" textFill="#f0f0f0">
+                                 <font>
+                                    <Font name="Arial Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="463.2" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="h4" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#onManualButtonClick" prefHeight="34.0" prefWidth="94.0" text="Read">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="h8" />
+                                    <String fx:value="bold" />
+                                    <String fx:value="primary-button" />
+                                 </styleClass>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <styleClass>
+                              <String fx:value="main-data-box" />
+                              <String fx:value="box" />
+                           </styleClass>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="45.0" left="45.0" right="45.0" top="60.0" />
+               </padding>
+            </VBox>
+         </content>
+        </ScrollPane>
+    </children>
+</HBox>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="158.0" prefWidth="400.0" spacing="10.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.NumberInputDialogController">
+   <children>
+      <Label fx:id="dialogTitleLabel" text="dialogTitleLabel" textFill="#f0f0f0">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <styleClass>
+            <String fx:value="h8" />
+            <String fx:value="bold" />
+         </styleClass>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <Label fx:id="messageLabel" styleClass="h10" text="messageLabel" textFill="#f0f0f0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inputTextField" prefHeight="30.0" prefWidth="150.0" stylesheets="@../styles/confirm-dialog/dialog.css">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <styleClass>
+                  <String fx:value="primary-text-field" />
+                  <String fx:value="text-field" />
+               </styleClass>
+            </TextField>
+         </children>
+      </HBox>
+      <Label fx:id="errorLabel" styleClass="h10" textFill="#f41515">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="31.0" prefWidth="278.0" spacing="10.0">
+         <children>
+            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#onConfirmButtonClicked" prefHeight="28.0" prefWidth="79.0" stylesheets="@../styles/confirm-dialog/dialog.css" text="Confirm" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="h10" />
+                  <String fx:value="bold" />
+                  <String fx:value="primary-button" />
+                  <String fx:value="violet-button" />
+               </styleClass>
+            </Button>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButtonClicked" prefHeight="26.0" prefWidth="80.0" stylesheets="@../styles/confirm-dialog/dialog.css" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="h10" />
+                  <String fx:value="bold" />
+                  <String fx:value="secondary-button" />
+                  <String fx:value="white-button" />
+               </styleClass>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@../styles/confirm-dialog/dialog.css" />
+      <URL value="@../../../../../data/styles/styles.css" />
+   </stylesheets>
+   <styleClass>
+      <String fx:value="pop-up" />
+      <String fx:value="background" />
+   </styleClass>
+</VBox>

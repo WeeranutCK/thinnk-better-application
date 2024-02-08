@@ -1,0 +1,16 @@
+* {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.button {
+    -fx-background-radius: 7;
+}
+
+.label {
+    -fx-text-fill: #F0F0F0;
+}
+
+.pop-up {
+    -fx-background-color: #131113;
+}

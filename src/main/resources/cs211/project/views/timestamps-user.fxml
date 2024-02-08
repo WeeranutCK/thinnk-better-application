@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefWidth="1024.0" stylesheets="@../../../../../data/styles/styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.TimestampsUserController">
+   <children>
+      <VBox fx:id="navBarVBox" alignment="TOP_CENTER" prefWidth="214.0" />
+      <ScrollPane fitToWidth="true" prefWidth="810.0" stylesheets="@../styles/timestamps-user-list/timestamps-user-list.css">
+         <content>
+            <VBox prefWidth="792.0" styleClass="background">
+               <children>
+                  <HBox prefWidth="722.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="634.0" text="Timestamps" textFill="#f0f0f0">
+                           <font>
+                              <Font name="Arial Bold" size="26.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="h2" />
+                              <String fx:value="bold" />
+                           </styleClass>
+                        </Label>
+                        <HBox alignment="TOP_RIGHT">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onBackButtonClicked" prefHeight="31.0" prefWidth="85.0" stylesheets="@../styles/timestamps-user/button.css" text="Back">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <styleClass>
+                                    <String fx:value="secondary-button" />
+                                    <String fx:value="h8" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Selected User :" textFill="#f0f0f0">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="h4" />
+                              <String fx:value="bold" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="userIdLabel" text="userIdLabel" textFill="#f0f0f0">
+                           <font>
+                              <Font name="Arial Bold" size="22.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="h4" />
+                              <String fx:value="bold" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox alignment="CENTER_LEFT" styleClass="box">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="General Information" textFill="#f0f0f0">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="h5" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="25.0" top="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="CENTER" prefWidth="703.0" styleClass="box-in-event">
+                           <padding>
+                              <Insets bottom="20.0" left="35.0" right="35.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox />
+                                    <HBox prefHeight="118.0" prefWidth="341.0" spacing="15.0">
+                                       <children>
+                                          <HBox prefHeight="110.0" prefWidth="114.0">
+                                             <children>
+                                                <ImageView fx:id="profilePicture" fitHeight="109.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+                                             </children>
+                                          </HBox>
+                                          <VBox fillWidth="false" prefHeight="110.0" prefWidth="113.0" spacing="5.0">
+                                             <children>
+                                                <Label prefHeight="26.0" text="Username" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="16.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="h8" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label prefHeight="26.0" text="Profile Name" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="16.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="h8" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label layoutX="46.0" layoutY="41.0" prefHeight="26.0" text="Date of Birth" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="16.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="h8" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                                <Label layoutX="46.0" layoutY="72.0" prefHeight="26.0" text="Email" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="16.0" />
+                                                   </font>
+                                                   <styleClass>
+                                                      <String fx:value="h8" />
+                                                      <String fx:value="bold" />
+                                                   </styleClass>
+                                                </Label>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="15.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                          <VBox prefHeight="118.0" spacing="5.0">
+                                             <children>
+                                                <Label fx:id="usernameLabel" prefHeight="26.0" styleClass="h8" text="usernameLabel" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="profileNameLabel" prefHeight="26.0" styleClass="h8" text="profileNameLabel" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="dateOfBirthLabel" prefHeight="26.0" styleClass="h8" text="dateOfBirthLabel" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="emailLabel" prefHeight="26.0" styleClass="h8" text="emailLabel" textFill="#f0f0f0">
+                                                   <font>
+                                                      <Font name="Arial" size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets left="15.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" styleClass="box">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="Timestamps Table" textFill="#f0f0f0">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="h5" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="15.0" left="25.0" top="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <VBox alignment="CENTER" prefWidth="703.0" styleClass="box-in-event">
+                           <padding>
+                              <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
+                           </padding>
+                           <children>
+                              <TableView fx:id="timestampTableView" prefHeight="500.0" stylesheets="@../styles/timestamps-user/table-view.css">
+                                 <columns>
+                                    <TableColumn fx:id="yearColumn" maxWidth="65.0" minWidth="65.0" prefWidth="65.0" resizable="false" text="Year" />
+                                    <TableColumn fx:id="monthColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" text="Month" />
+                                    <TableColumn fx:id="dateColumn" maxWidth="48.0" minWidth="48.0" prefWidth="48.0" resizable="false" text="Date" />
+                                    <TableColumn fx:id="dayColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" text="Day" />
+                                    <TableColumn fx:id="timeColumn" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Time" />
+                                    <TableColumn fx:id="fullTimestampColumn" maxWidth="158.0" minWidth="158.0" prefWidth="158.0" resizable="false" text="Full Timestamp" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="45.0" left="45.0" right="45.0" top="45.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</HBox>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fillWidth="false" prefHeight="175.0" prefWidth="643.0" style="-fx-background-color: transparent;" stylesheets="@../../../../../data/styles/styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.ScheduleController">
+   <children>
+      <StackPane alignment="CENTER_LEFT">
+         <children>
+            <HBox fillHeight="false" prefHeight="185.0" prefWidth="643.0" stylesheets="@../styles/schedule/schedule.css">
+               <children>
+                  <VBox fx:id="dayBackgroundVBox" alignment="CENTER" fillWidth="false" maxHeight="178.0" maxWidth="119.0" prefHeight="175.0" prefWidth="42.0" styleClass="date-background" stylesheets="@../styles/schedule/schedule.css" />
+                  <VBox fillWidth="false" prefHeight="142.0" prefWidth="566.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label fx:id="activityLabel" text="activityLabel" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="h8" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefWidth="526.0">
+                           <children>
+                              <Label fx:id="descriptionLabel" maxWidth="515.0" prefHeight="70.0" prefWidth="515.0" styleClass="h9" text="descriptionLabel" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Team" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="h10" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                              <Label fx:id="staffTeamLabel" styleClass="h10" text="staffTeamLabel" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Time" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="h10" />
+                                    <String fx:value="bold" />
+                                 </styleClass>
+                              </Label>
+                              <Label fx:id="timeLabel" styleClass="h10" text="timeLabel" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="20.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <styleClass>
+                  <String fx:value="vbox-background" />
+                  <String fx:value="schedule-background" />
+               </styleClass>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label fx:id="dayLabel" alignment="CENTER" contentDisplay="TOP" maxHeight="449.0" prefHeight="0.0" prefWidth="175.0" rotate="-90.0" stylesheets="@../styles/schedule/schedule.css" text="dayLabel" textFill="WHITE" textOverrun="CLIP" translateX="-66.5">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="date-text" />
+                        <String fx:value="h8" />
+                        <String fx:value="bold" />
+                     </styleClass>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="175.0" prefWidth="468.0">
+                     <children>
+                        <VBox fx:id="editVBox" alignment="CENTER" prefHeight="179.0" prefWidth="37.0" spacing="20.0" stylesheets="@../styles/schedule/schedule.css">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="27.0" onMouseClicked="#onEditActivityClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/edit-pen-icon-white.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Line endX="275.2728271484375" endY="3.8781700134277344" startX="241.54844665527344" startY="3.8781700134277344" stroke="#252525" strokeWidth="3.0" />
+                              <VBox alignment="CENTER" fillWidth="false" prefWidth="38.0">
+                                 <children>
+                                    <CheckBox fx:id="checkBox" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" scaleX="1.25" scaleY="1.25">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <styleClass>
+                              <String fx:value="edit-background" />
+                              <String fx:value="schedule-edit-background" />
+                           </styleClass>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

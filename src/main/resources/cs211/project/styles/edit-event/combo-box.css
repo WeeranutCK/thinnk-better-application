@@ -1,0 +1,11 @@
+.combo-box {
+    -fx-font-family: Arial;
+}
+
+.combo-box .indexed-cell {
+    -fx-alignment: CENTER;
+}
+
+.combo-box .list-cell {
+    -fx-alignment: CENTER;
+}

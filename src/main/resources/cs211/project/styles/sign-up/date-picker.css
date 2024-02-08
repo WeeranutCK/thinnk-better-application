@@ -1,0 +1,15 @@
+* {
+    -fx-background-color: transparent;
+}
+
+.date-picker .inner {
+    -fx-border-insets: null;
+}
+
+.date-picker .arrow-button {
+    -fx-border-insets: null;
+}
+
+.date-picker-popup > .calendar-grid {
+    -fx-padding: 0;
+}

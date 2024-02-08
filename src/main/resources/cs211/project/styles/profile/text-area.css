@@ -1,0 +1,8 @@
+.text-area {
+    -fx-background-radius: 5;
+    -fx-background-insets: 0;
+}
+
+.text-area .content {
+    -fx-background-radius: 0;
+}

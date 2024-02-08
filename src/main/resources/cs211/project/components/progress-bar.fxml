@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="progressBarHBox" alignment="TOP_CENTER" prefHeight="50.0" prefWidth="400.0" spacing="5.0" stylesheets="@../styles/progress-bar/progress-bar.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs211.project.controllers.ProgressBarController">
+   <children>
+      <ProgressBar fx:id="progressBar" prefHeight="30.0" prefWidth="350.0" progress="0.0" stylesheets="@../styles/progress-bar/progress-bar.css">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin></ProgressBar>
+   </children>
+</HBox>

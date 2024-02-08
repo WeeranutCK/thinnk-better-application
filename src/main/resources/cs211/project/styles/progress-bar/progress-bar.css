@@ -1,0 +1,16 @@
+* {
+    -fx-border-color: #3B3B3B;
+    -fx-box-border: #3B3B3B;
+    -fx-control-inner-background: #131113;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 50;
+}
+
+.h-box {
+    -fx-background-color: #3B3B3B;
+}
+
+.progress-bar > .bar {
+    -fx-border-color: transparent;
+}

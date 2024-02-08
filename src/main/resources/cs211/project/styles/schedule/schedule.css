@@ -1,0 +1,43 @@
+.vbox-background {
+    -fx-background-radius: 20;
+}
+
+.date-background {
+    -fx-background-radius: 20 0 0 20;
+}
+
+.edit-background {
+    -fx-background-radius: 0 20 20 0;
+}
+
+.monday {
+    -fx-background-color: #D5A504;
+}
+
+.tuesday {
+    -fx-background-color: #DA2583;
+}
+
+.wednesday {
+    -fx-background-color: #25DB61;
+}
+
+.thursday {
+    -fx-background-color: #DB7424;
+}
+
+.friday {
+    -fx-background-color: #257FDB;
+}
+
+.saturday {
+    -fx-background-color: #7100FE;
+}
+
+.sunday {
+    -fx-background-color: #FF0000;
+}
+
+.button {
+    -fx-background-radius: 20;
+}
